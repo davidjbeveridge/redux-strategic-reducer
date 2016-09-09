@@ -1,6 +1,7 @@
-var strategicReducer;
-
-strategicReducer = require('../lib').strategicReducer;
+var r = require('../lib');
+var strategicReducer = r.strategicReducer
+var setProperty = r.setProperty
+var clearProperty = r.clearProperty
 
 describe('strategicReducer', function() {
 
@@ -34,6 +35,35 @@ describe('strategicReducer', function() {
           foo: 'whiz'
         });
       });
+    });
+  });
+});
+
+describe('setProperty', function() {
+  var setFoo = setProperty('foo');
+
+  describe('the returned reducer function', function(){
+    it('sets the named property to the value of the payload', function(){
+      expect(setFoo({}, {type: 'SET_FOO', payload: 'bar'})).to.eql({
+        foo: 'bar'
+      })
+    });
+  });
+});
+
+describe('clearProperty', function() {
+  var clearFoo = clearProperty('foo');
+
+  describe('the returned reducer function', function(){
+    it('clears the named property', function(){
+      expect(clearFoo({
+        foo: 'bar',
+        whiz: 'bang'
+      }, {
+        type: 'CLEAR_FOO',
+      })).to.eql({
+        whiz: 'bang'
+      })
     });
   });
 });

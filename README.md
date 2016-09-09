@@ -17,7 +17,7 @@ npm install --save redux-create-reducer
 
 ## Usage
 
-### strategicReducer
+### `strategicReducer`
 
 Create a strategy-based reducer thus:
 
@@ -53,3 +53,25 @@ export default function counter(state = 0, action) {
 }
 ```
 
+### `setProperty` and `clearProperty`
+
+There are helper functions that will create setters and clearers for you,
+given a property name:
+
+```javascript
+import {
+  strategicReducer,
+  setProperty,
+  clearProperty,
+} from 'redux-create-reducer';
+
+const defaultState = { title: null };
+
+export default const counter = strategicReducer(defaultState, {
+  'SET_TITLE': setProperty('title')
+,
+  'CLEAR_TITLE': clearProperty('title')});
+```
+
+That should produce a strategic reducer equivalent to the example in the
+section above.
