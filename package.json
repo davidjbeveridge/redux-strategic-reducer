@@ -2,11 +2,19 @@
   "name": "redux-strategic-reducer",
   "version": "1.0.0",
   "description": "Reduce your Redux reducers",
+  "keywords": [],
+  "homepage": "https://github.com/davidjbeveridge/redux-strategic-reducer",
+  "bugs": "https://github.com/davidjbeveridge/redux-strategic-reducer/issues",
+  "repository": "davidjbeveridge/redux-strategic-reducer",
   "main": "lib/index.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha test/*.spec.js"
   },
-  "author": "David Beveridge <davidjbeveridge@gmail.com>",
+  "author": {
+    "name": "David Beveridge",
+    "email": "davidjbeveridge@gmail.com",
+    "url": "http://davidbeveridge.net"
+  },
   "license": "ISC",
   "dependencies": {
   },
