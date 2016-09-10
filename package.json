@@ -1,6 +1,6 @@
 {
   "name": "redux-strategic-reducer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Reduce your Redux reducers",
   "keywords": [],
   "homepage": "https://github.com/davidjbeveridge/redux-strategic-reducer",
